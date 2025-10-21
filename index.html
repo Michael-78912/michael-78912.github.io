@@ -1,28 +1,90 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FUTUREVOID</title>
-    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <img src="logo.png" width="1000">
-    <h2>Hey, we're FUTUREVOID. And no, this website is not complete.</h2>
-    <h3>We'll have a nice, pretty website up in no time, so be sure to check back!</h3>
-    <p>You can kill that time (I'm sure you're anxiously waiting) by listening to our music, or rotting your brain with
-        our socials!</p>
-    <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb">Spotify</a>
-    <a href="https://music.apple.com/ca/artist/futurevoid/1748332220">Apple Music</a>
-    <a href="https://www.deezer.com/en/artist/267229702">Deezer</a>
-    <a href="https://futurevoid.bandcamp.com">bandcamp</a>
-    <br>
-    <a href="https://www.youtube.com/@FutureVoidBC">Youtube</a>
-    <a href="https://www.instagram.com/futurevoid.bc/">Instagram</a>
-    <a href="https://www.tiktok.com/@futurevoid.bc">tiktok</a>
-    <br>
-    <a href="mailto:futurevoidbc@gmail.com">Contact Us!</a>
-    <p>Thanks for stopping by!</p>
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/logo (red).png" alt="FUTUREVOID Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dates.html">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BIG JAMO</h1>
+            <p>New single out now — streaming everywhere</p>
+            <a href="#music" class="btn">Listen Now</a>
+            <img src="assets/bigjamocover.png" alt="FUTUREVOID Band Image" class="hero-image" />
+        </div>
+    </section>
+
+    <section id="music" class="music-section">
+        <h2>New Music</h2>
+        <div class="embeds">
+            <iframe data-testid="embed-iframe" style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/6DnyBOgMWUZYvtDzhHJpaB?utm_source=generator" width="100%"
+                height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5PTengr8zu8?si=ke1HJWAzSxKooJ_6"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h2>Stream our Debut EP!</h2>
+        <div class="embeds">
+            <iframe data-testid="embed-iframe" style="border-radius:12px"
+                src="https://open.spotify.com/embed/album/4pEfeyOBnLYWCcQCKMNbDt?utm_source=generator" width="100%"
+                height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/videoseries?si=aQzN3W22Q0E_UmLt&amp;list=PLx29Rs-3-5ZCTZjDwpJpvApkHCzWDGgwZ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact & Social</h2>
+        <p>For booking or press: <a href="mailto:futurevoidbc@gmail.com">futurevoidbc@gmail.com</a></p>
+        <div class="social-icons">
+            <a target="_blank" href="https://www.instagram.com/futurevoid.bc/" target="_blank"><img
+                    src="assets/instagram.svg" alt="Instagram" /></a>
+            <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="" _blank><img
+                    src="assets/spotify.svg" alt="Spotify" target="_blank" /></a>
+            <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank"><img
+                    src="assets/apple-music.svg" alt="Apple Music" target="_blank"></a>
+            <a href="https://www.youtube.com/@futurevoidbc" target="_blank"><img src="assets/youtube.svg"
+                    alt="YouTube" /></a>
+            <a href="https://www.deezer.com/en/artist/267229702" target="_blank"><img src="assets/deezer.svg"
+                    alt="Deezer" /> </a>
+            <a href="https://futurevoid.bandcamp.com/" target="_blank"><img src="assets/bandcamp.svg"
+                    alt="Bandcamp" /></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FUTUREVOID. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
