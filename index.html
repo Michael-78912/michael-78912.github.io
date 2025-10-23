@@ -8,108 +8,114 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-BVZHS87LKG');
     </script>
+
+    <!-- Meta basics -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FUTUREVOID</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
     <meta name="description"
-        content="Official website of FUTUREVOID, Canadian Metalcore Band, Kelowna BC. New Music, Tour Dates, Blog and Contact Info." />
+        content="Official website for Kelowna-Based Metalcore band FUTUREVOID. Photos, Music, Blog and More!" />
+    <title>About</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="FUTUREVOID — Home" />
+    <meta property="og:description"
+        content="Official website for Kelowna-Based Metalcore band FUTUREVOID. Photos, Music, Blog and More!" />
+
+    <meta property="og:image" content="https://futurevoid.ca/assets/images/bigjamocover.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://futurevoid.ca" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FUTUREVOID - About" />
+    <meta name="twitter:description" content="About FUTUREVOID" />
+    <meta name="twitter:image" content="https://futurevoid.ca/assets/images/bigjamocover.png" />
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "FUTUREVOID",
-    "url": "https://futurevoid.ca",
-    "sameAs": [
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "FUTUREVOID",
+      "url": "https://futurevoid.ca/about",
+      "image": "https://futurevoid.ca/assets/images/logo%20(red).png",
+      "genre": "Metalcore",
+      "foundingLocation": "Kelowna, BC, Canada",
+      "sameAs": [
         "https://www.instagram.com/futurevoid.bc",
         "https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb",
         "https://www.youtube.com/@futurevoidbc"
-    ]
+      ]
     }
     </script>
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="logo">
-            <img src="assets/logo (red).png" alt="FUTUREVOID Logo" />
-        </div>
-        <nav>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="dates.html">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="music">Music</a></li>
+                <li><a href="dates">Shows</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-overlay"></div>
+
         <div class="hero-content">
-            <h1>BIG JAMO</h1>
-            <p>New single out now — streaming everywhere</p>
-            <a href="#music" class="btn">Listen Now</a>
-            <img src="assets/bigjamocover.png" alt="FUTUREVOID Band Image" class="hero-image" />
+            <img src="assets/images/logo (red).png" alt="Futurevoid Logo" class="hero-logo">
+            <p><b>BIG JAMO HAS BEEN UNLEASHED</b></p>
+            <a href="music.html" class="btn btn-primary">Listen Now</a>
         </div>
-    </section>
 
-    <section id="music" class="music-section">
-        <h2>New Music</h2>
-        <div class="embeds">
-            <iframe data-testid="embed-iframe" style="border-radius:12px"
-                src="https://open.spotify.com/embed/track/6DnyBOgMWUZYvtDzhHJpaB?utm_source=generator" width="100%"
-                height="352" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5PTengr8zu8?si=ke1HJWAzSxKooJ_6"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h2>Stream our Debut EP!</h2>
-        <div class="embeds">
-            <iframe data-testid="embed-iframe" style="border-radius:12px"
-                src="https://open.spotify.com/embed/album/4pEfeyOBnLYWCcQCKMNbDt?utm_source=generator" width="100%"
-                height="352" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/videoseries?si=aQzN3W22Q0E_UmLt&amp;list=PLx29Rs-3-5ZCTZjDwpJpvApkHCzWDGgwZ"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2>Contact & Social</h2>
-        <p>For booking or press: <a href="mailto:futurevoidbc@gmail.com">futurevoidbc@gmail.com</a></p>
-        <div class="social-icons">
-            <a target="_blank" href="https://www.instagram.com/futurevoid.bc/" target="_blank"><img
-                    src="assets/instagram.svg" alt="Instagram" /></a>
-            <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="" _blank><img
-                    src="assets/spotify.svg" alt="Spotify" target="_blank" /></a>
-            <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank"><img
-                    src="assets/apple-music.svg" alt="Apple Music" target="_blank"></a>
-            <a href="https://www.youtube.com/@futurevoidbc" target="_blank"><img src="assets/youtube.svg"
-                    alt="YouTube" /></a>
-            <a href="https://www.deezer.com/en/artist/267229702" target="_blank"><img src="assets/deezer.svg"
-                    alt="Deezer" /> </a>
-            <a href="https://futurevoid.bandcamp.com/" target="_blank"><img src="assets/bandcamp.svg"
-                    alt="Bandcamp" /></a>
+        <!-- CONNECT/OVERLAY FLOATING OVER HERO -->
+        <div class="connect-overlay">
+            <h2>NEW MUSIC</h2>
+            <div class="buttons">
+                <a href="https://distrokid.com/hyperfollow/futurevoid/CYANIDE" class="btn-secondary"
+                    target="_blank">Pre-Save CYANIDE</a>
+                <a href="https://youtu.be/5PTengr8zu8" class="btn-secondary" target="_blank">Listen to BIG JAMO</a>
+            </div>
+            <div class="icons">
+                <div class="icons">
+                    <a href="https://instagram.com/futurevoid.bc" target="_blank"><img src="assets/icons/instagram.svg"
+                            alt="Instagram"></a>
+                    <a href="https://tiktok.com/@futurevoid.bc" target="_blank"><img src="assets/icons/tiktok.svg"
+                            alt="TikTok"></a>
+                    <a href="https://youtube.com/@futurevoidbc" target="_blank"><img src="assets/icons/youtube.svg"
+                            alt="YouTube"></a>
+                    <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="_blank"><img
+                            src="assets/icons/spotify.svg" alt="Spotify"></a>
+                    <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank"><img
+                            src="assets/icons/apple-music.svg" alt="Apple Music"></a>
+                    <a href="https://futurevoid.bandcamp.com/" target="_blank"><img src="assets/icons/bandcamp.svg"
+                            alt="Bandcamp"></a>
+                    <a href="https://www.deezer.com/en/artist/267229702" target="_blank"><img
+                            src="assets/icons/deezer.svg" alt="Deezer"></a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
+        <p>For booking or press: <a href="mailto:futurevoidbc@gmail.com">futurevoidbc@gmail.com</a></p>
         <p>&copy; 2025 FUTUREVOID. All Rights Reserved.</p>
         <p>Kelowna, British Columbia, Canada</p>
     </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@latest"></script>
+    <script src="assets/js/parallax.js"></script>
 </body>
 
 </html>
