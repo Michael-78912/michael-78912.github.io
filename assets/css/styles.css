@@ -387,3 +387,78 @@ footer {
         transform: scale(1.1);
     }
 }
+
+/* ------------------------ */
+/* Fixed Social/Streaming Sidebar */
+/* ------------------------ */
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 8px 0 0 8px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.social-sidebar:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.social-sidebar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.social-sidebar a img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-sidebar a:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px #e00070) brightness(1.3);
+}
+
+/* ------------------------ */
+/* Mobile Adjustment */
+/* ------------------------ */
+@media (max-width: 768px) {
+    .social-sidebar {
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        border-radius: 8px 8px 0 0;
+        padding: 0.5rem;
+        gap: 0.75rem;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .social-sidebar:hover {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .social-sidebar a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-sidebar a img {
+        width: 22px;
+        height: 22px;
+    }
+}
