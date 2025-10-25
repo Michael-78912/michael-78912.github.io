@@ -1,6 +1,6 @@
-/* =============================== */
-/* RESET / BASE STYLES             */
-/* =============================== */
+/* If you came to the CSS for funny comments, FUCK YOU! This is a no joke zone this shit's serious */
+
+/* Global */
 
 html,
 body {
@@ -12,11 +12,10 @@ body {
     color: #FF0000;
 }
 
-/* =============================== */
-/* HEADER / NAVIGATION             */
-/* =============================== */
+/* Header & navbar */
 
 .site-header {
+    /* Anchor navbar to top */
     position: fixed;
     top: 0;
     left: 0;
@@ -52,12 +51,13 @@ body {
     color: #e00070;
 }
 
-/* Slightly smaller logo */
+/* FV logo styling */
+
 .logo img {
     max-width: 130px;
 }
 
-/* Responsive header (no stacking) */
+/* Responsive header (tablet) (no stacking) */
 @media (max-width: 768px) {
     .navbar ul {
         gap: 1rem;
@@ -76,6 +76,8 @@ body {
         padding: 0.4rem 0;
     }
 }
+
+/* Responsive header (mobile) */
 
 @media (max-width: 480px) {
     .navbar ul {
@@ -99,9 +101,10 @@ body {
     }
 }
 
-/* =============================== */
-/* HERO SECTION                    */
-/* =============================== */
+
+/* HERO SECTION */
+/* ONLY USE for the main landing page */
+/* or the world will explode */
 
 .hero {
     display: flex;
@@ -148,6 +151,8 @@ body {
     position: relative;
 }
 
+
+/* Not sure if this rule is used for the logo or the main one. Remove the right one when I feel like it */
 .hero-logo {
     width: 90vw;
     max-width: 1200px;
@@ -161,9 +166,7 @@ body {
     color: #fff;
 }
 
-/* =============================== */
-/* BUTTONS                         */
-/* =============================== */
+/* Buttons (yippee) */
 
 .btn {
     display: inline-block;
@@ -193,9 +196,8 @@ body {
     filter: brightness(1.2);
 }
 
-/* =============================== */
-/* CONNECT OVERLAY                 */
-/* =============================== */
+
+/* CONNECT OVERLAY (still don't know why it's called that) */
 
 .connect-overlay {
     position: absolute;
@@ -250,9 +252,9 @@ body {
     filter: brightness(1.3);
 }
 
-/* =============================== */
-/* FOOTER                          */
-/* =============================== */
+
+/* FOOTER */
+
 
 footer {
     text-align: center;
@@ -263,9 +265,7 @@ footer {
     color: #666;
 }
 
-/* =============================== */
-/* RESPONSIVE HERO + OVERLAY       */
-/* =============================== */
+/* RESPONSIVE HERO + OVERLAY */
 
 @media (max-width: 900px) {
     .hero {
@@ -365,7 +365,6 @@ footer {
         width: 100%;
         /* ensures equal width no matter text */
         max-width: none;
-        /* remove previous constraint */
     }
 
     /* Icons smaller and tidy */
@@ -386,11 +385,13 @@ footer {
     .connect-overlay .icons img:hover {
         transform: scale(1.1);
     }
+
+    /* This shits so confusing. I can write C all day but CSS is worse than R on meth */
 }
 
-/* ------------------------ */
 /* Fixed Social/Streaming Sidebar */
-/* ------------------------ */
+/* Why is this here. This should be in its own file but whatever */
+
 .social-sidebar {
     position: fixed;
     top: 50%;
@@ -431,9 +432,8 @@ footer {
     filter: drop-shadow(0 0 6px #e00070) brightness(1.3);
 }
 
-/* ------------------------ */
 /* Mobile Adjustment */
-/* ------------------------ */
+
 @media (max-width: 768px) {
     .social-sidebar {
         flex-direction: row;
@@ -462,3 +462,5 @@ footer {
         height: 22px;
     }
 }
+
+/* To Future Michael: I'm sorry to put you through this again */
