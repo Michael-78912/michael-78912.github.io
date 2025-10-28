@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUTUREVOID BLOG</title>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVZHS87LKG"></script>
@@ -13,61 +14,149 @@
         gtag('js', new Date());
         gtag('config', 'G-BVZHS87LKG');
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FUTUREVOID Blog</title>
+
+    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/about.css" />
+    <link rel="stylesheet" href="/assets/css/gallery.css" />
+    <link rel="stylesheet" href="/assets/css/blog.css" />
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- SEO / Open Graph -->
     <meta name="description"
-        content="Music, personal, tour, and general band updates from the Kelowna, BC based-metalcore band FUTUREVOID.">
-    <meta property="og:title" content="Futurevoid — Home">
+        content="Updates, news and blog posts for the Kelowna, BC based-metalcore band FUTUREVOID. Read about how our tour is going, song writing, music releases and more!">
+    <meta property="og:title" content="FUTUREVOID BLOG">
     <meta property="og:description"
-        content="Music, personal, tour, and general band updates from the Kelowna, BC based-metalcore band FUTUREVOID.">
+        content="Updates, news and blog posts for the Kelowna, BC based-metalcore band FUTUREVOID. Read about how our tour is going, song writing, music releases and more!">
     <meta property="og:image" content="/assets/images/bigjamocover.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://futurevoid.ca/blog">
+
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "FUTUREVOID",
-    "url": "https://futurevoid.ca/blog",
-    "sameAs": [
-        "https://www.instagram.com/futurevoid.bc",
-        "https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb",
-        "https://www.youtube.com/@futurevoidbc"
-    ]
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "FUTUREVOID",
+        "url": "https://futurevoid.ca/blog",
+        "sameAs": [
+            "https://www.instagram.com/futurevoid.bc",
+            "https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb",
+            "https://www.youtube.com/@futurevoidbc"
+        ]
     }
     </script>
+
 </head>
 
-
 <body>
+
+    <!-- Header / Navbar -->
     <header class="site-header">
         <nav class="navbar">
             <ul>
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/music">Music</a></li>
                 <li><a href="/dates">Shows</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
+                <li><a href="#" id="open-gallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
-    <h1>BLOG</h1>
-    <h3>Oct 21, 2025</h3>
-    <p>Finally got some version of the website up! It is by no means perfect yet but here it is</p>
-    <p>I know this isn't a dev blog but the SVGs are annoying.</p>
 
+    <!-- Blog Hero Section (same as About) -->
+
+    <section class="about-hero blog-hero">
+        <img src="/assets/images/blog-hero-bg.jpg" alt="Blog Hero" class="about-hero-bg">
+        <div class="about-hero-content">
+            <h1>FUTUREVOID Blog</h1>
+            <p>Your exclusive look at whatever we've been up to.</p>
+        </div>
+    </section>
+
+
+    <main id="blog-container" class="about-content">
+        <!-- posts injected via JS -->
+    </main>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="_blank">
+            <img src="/assets/icons/spotify.svg" alt="Spotify">
+        </a>
+        <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank">
+            <img src="/assets/icons/apple-music.svg" alt="Apple Music">
+        </a>
+        <a href="https://instagram.com/futurevoid.bc" target="_blank">
+            <img src="/assets/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://youtube.com/@futurevoidbc" target="_blank">
+            <img src="/assets/icons/youtube.svg" alt="YouTube">
+        </a>
+        <a href="https://tiktok.com/@futurevoid.bc" target="_blank">
+            <img src="/assets/icons/tiktok.svg" alt="TikTok">
+        </a>
+    </div>
+
+
+
+    <!-- Load Marked.js UMD build (browser-ready) -->
+    <script src="/lib/marked.min.js"></script>
+    <script>
+        // make sure marked is global
+        window.marked = window.marked || marked;
+    </script>
+
+    <!-- Then load your blog parser -->
+    <script src="/assets/js/blog_parse.js"></script>
+
+
+    <!-- Gallery overlay placeholder -->
+    <div id="gallery-placeholder"></div>
+    <script>
+        document.getElementById("open-gallery").addEventListener("click", async (e) => {
+            e.preventDefault();
+            const placeholder = document.getElementById("gallery-placeholder");
+
+            if (!placeholder.hasChildNodes()) {
+                try {
+                    const html = await fetch("/assets/embeds/gallery.html").then(res => res.text());
+                    placeholder.innerHTML = html;
+
+                    const script = document.createElement("script");
+                    script.src = "/assets/js/gallery.js";
+                    document.body.appendChild(script);
+
+                    script.onload = () => {
+                        const galleryContainer = document.getElementById("gallery-container");
+                        if (galleryContainer) galleryContainer.classList.add("active");
+                        else console.error("Gallery container not found after loading script.");
+                    };
+                } catch (err) {
+                    console.error("Error loading gallery:", err);
+                }
+            } else {
+                const galleryContainer = document.getElementById("gallery-container");
+                if (galleryContainer) galleryContainer.classList.add("active");
+            }
+        });
+    </script>
+
+    <!-- Footer -->
     <footer>
         <p>For booking or press: <a href="mailto:futurevoidbc@gmail.com">futurevoidbc@gmail.com</a></p>
         <p>&copy; 2025 FUTUREVOID. All Rights Reserved.</p>
         <p>Kelowna, British Columbia, Canada</p>
     </footer>
 
+    <!-- Optional smooth scrolling library -->
     <script src="https://unpkg.com/@studio-freight/lenis@latest"></script>
-    <script src="assets/js/parallax.js"></script>
+
 </body>
 
 </html>
