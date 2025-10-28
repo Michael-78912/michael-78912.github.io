@@ -41,6 +41,7 @@
 
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/easter.css" />
+    <link rel="stylesheet" href="/assets/css/gallery.css" />
 
     <script type="application/ld+json">
     {
@@ -84,6 +85,7 @@
             <img src="assets/images/logo (red).png" alt="Futurevoid Logo" class="hero-logo">
             <p><b>BIG JAMO HAS BEEN UNLEASHED</b></p>
             <a href="/music/" class="btn btn-primary">Listen Now</a>
+            <a href="#" class="hero-link" id="open-gallery">View Gallery</a>
         </div>
 
         <!-- CONNECT/OVERLAY FLOATING OVER HERO -->
@@ -123,6 +125,49 @@
         <span class="heart">❤</span>
         <div class="heart-message">We truly do love you. Thanks for the support.</div>
     </div>
+
+    <!-- GALLERY OVERLAY -->
+    <div id="gallery-placeholder"></div>
+    <script>
+        document.getElementById("open-gallery").addEventListener("click", async (e) => {
+            e.preventDefault();
+            const placeholder = document.getElementById("gallery-placeholder");
+
+            // Only load once
+            if (!placeholder.hasChildNodes()) {
+                try {
+                    const html = await fetch("assets/embeds/gallery.html").then(res => res.text());
+                    placeholder.innerHTML = html;
+
+                    // Dynamically load JS file
+                    const script = document.createElement("script");
+                    script.src = "assets/js/gallery.js";
+                    document.body.appendChild(script);
+
+                    // Wait until script has loaded and executed
+                    script.onload = () => {
+                        const galleryContainer = document.getElementById("gallery-container");
+                        if (galleryContainer) {
+                            galleryContainer.classList.add("active");
+                        } else {
+                            console.error("Gallery container not found after loading script.");
+                        }
+                    };
+                } catch (err) {
+                    console.error("Error loading gallery:", err);
+                }
+            } else {
+                // Already loaded; just show it
+                const galleryContainer = document.getElementById("gallery-container");
+                if (galleryContainer) {
+                    galleryContainer.classList.add("active");
+                }
+            }
+        });
+    </script>
+
+
+
 
     <footer>
         <p>For booking or press: <a href="mailto:futurevoidbc@gmail.com">futurevoidbc@gmail.com</a></p>

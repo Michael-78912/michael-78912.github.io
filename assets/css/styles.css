@@ -166,6 +166,25 @@ body {
     color: #fff;
 }
 
+/* For Photo Gallery link */
+
+.hero-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.hero-link:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+
 /* Buttons (yippee) */
 
 .btn {

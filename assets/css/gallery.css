@@ -1,0 +1,161 @@
+/* Overlay base */
+.gallery-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.gallery-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Gallery content layout */
+.gallery-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image wrapper */
+.gallery-image-wrapper {
+    position: relative;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.gallery-image-wrapper img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+/* Caption styling */
+.gallery-caption {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #ccc;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Close & nav buttons */
+.gallery-close,
+.gallery-nav {
+    position: absolute;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.gallery-close:hover,
+.gallery-nav:hover {
+    color: #ff3333;
+}
+
+/* Move buttons outside the image area */
+.gallery-close {
+    top: -50px;
+    right: -60px;
+}
+
+.gallery-nav.prev {
+    left: -80px;
+}
+
+.gallery-nav.next {
+    right: -80px;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-content {
+        flex-direction: column;
+        max-width: 95vw;
+        max-height: 95vh;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .gallery-image-wrapper img {
+        max-width: 90vw;
+        max-height: 70vh;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .gallery-caption {
+        font-size: 0.85rem;
+        margin-top: 8px;
+    }
+
+    /* Close button in top-right corner */
+    .gallery-close {
+        top: 5px;
+        right: 5px;
+        font-size: 2.2rem;
+        z-index: 10;
+    }
+
+    /* Navigation arrows just inside the image edges */
+    .gallery-nav.prev {
+        left: 5px;
+        /* inside the image, slightly overlapping */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.4rem;
+        /* bigger for touch screens */
+        z-index: 10;
+    }
+
+    .gallery-nav.next {
+        right: 5px;
+        /* inside the image */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.4rem;
+        z-index: 10;
+    }
+}
+
+
+
+/* Optional: extra small screens (phones < 480px) */
+@media (max-width: 480px) {
+    .gallery-image-wrapper img {
+        max-width: 95vw;
+        max-height: 60vh;
+    }
+
+    .gallery-caption {
+        font-size: 0.8rem;
+    }
+
+    .gallery-close,
+    .gallery-nav {
+        font-size: 2rem;
+    }
+}
