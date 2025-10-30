@@ -89,6 +89,13 @@
 
 -->
 
+<POST DATE=2025-10-30 AUTHOR="Michael" TITLE="CYANIDE" LOCATION="Kelowna">
+Hello friends! Tonight, at I think around 9pm (so effectively on Halloween) CYANIDE comes out.
+This is one of our more emotional songs! But don't worry, it still has a lot of fast energy and screaming.
+We pushed Logan to his limits and  came out with a really unique vocal tone. We hope you guys enjoy!
+It will be out on all platforms tonight!
+</POST>
+
 <POST DATE="2025-10-28" AUTHOR="Michael" TITLE="Blog Sample" LOCATION="Kelowna">
 Yesterday we worked on a couple songs! Today I'm sitting in my room, sick, trying to figure out this website
 and make the blog posts ncie and easy for other peopel to write! I also did the **photo gallery**
