@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/about.css" />
     <link rel="stylesheet" href="/assets/css/gallery.css" />
+    <link rel="stylesheet" href="/assets/css/tooltips.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
 
@@ -83,22 +84,25 @@
     </section>
 
     <div class="social-sidebar">
-        <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="_blank">
+        <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="_blank" class="tooltip"
+            data-tooltip="Spotify">
             <img src="/assets/icons/spotify.svg" alt="Spotify">
         </a>
-        <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank">
+        <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank" class="tooltip"
+            data-tooltip="Apple Music">
             <img src="/assets/icons/apple-music.svg" alt="Apple Music">
         </a>
-        <a href="https://instagram.com/futurevoid.bc" target="_blank">
+        <a href="https://instagram.com/futurevoid.bc" target="_blank" class="tooltip" data-tooltip="Instagram">
             <img src="/assets/icons/instagram.svg" alt="Instagram">
         </a>
-        <a href="https://youtube.com/@futurevoidbc" target="_blank">
+        <a href="https://youtube.com/@futurevoidbc" target="_blank" class="tooltip" data-tooltip="YouTube">
             <img src="/assets/icons/youtube.svg" alt="YouTube">
         </a>
-        <a href="https://tiktok.com/@futurevoid.bc" target="_blank">
+        <a href="https://tiktok.com/@futurevoid.bc" target="_blank" class="tooltip" data-tooltip="TikTok">
             <img src="/assets/icons/tiktok.svg" alt="TikTok">
         </a>
     </div>
+
     <!-- GALLERY OVERLAY -->
     <div id="gallery-placeholder"></div>
     <script>

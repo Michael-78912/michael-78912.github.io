@@ -42,9 +42,11 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
 
+    <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/easter.css" />
     <link rel="stylesheet" href="/assets/css/gallery.css" />
+    <link rel="stylesheet" href="/assets/css/tooltips.css" />
 
     <script type="application/ld+json">
     {
@@ -103,25 +105,35 @@
                 <a href="https://youtu.be/j0ip26pKQSw" class="btn-secondary" target="_blank">Listen to CYANIDE</a>
                 <a href="https://youtu.be/5PTengr8zu8" class="btn-secondary" target="_blank">Listen to BIG JAMO</a>
             </div>
+
             <div class="icons">
-                <div class="icons">
-                    <a href="https://instagram.com/futurevoid.bc" target="_blank"><img src="assets/icons/instagram.svg"
-                            alt="Instagram"></a>
-                    <a href="https://tiktok.com/@futurevoid.bc" target="_blank"><img src="assets/icons/tiktok.svg"
-                            alt="TikTok"></a>
-                    <a href="https://youtube.com/@futurevoidbc" target="_blank"><img src="assets/icons/youtube.svg"
-                            alt="YouTube"></a>
-                    <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="_blank"><img
-                            src="assets/icons/spotify.svg" alt="Spotify"></a>
-                    <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank"><img
-                            src="assets/icons/apple-music.svg" alt="Apple Music"></a>
-                    <a href="https://futurevoid.bandcamp.com/" target="_blank"><img src="assets/icons/bandcamp.svg"
-                            alt="Bandcamp"></a>
-                    <a href="https://www.deezer.com/en/artist/267229702" target="_blank"><img
-                            src="assets/icons/deezer.svg" alt="Deezer"></a>
-                </div>
+                <a href="https://instagram.com/futurevoid.bc" target="_blank" class="tooltip" data-tooltip="Instagram">
+                    <img src="assets/icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://tiktok.com/@futurevoid.bc" target="_blank" class="tooltip" data-tooltip="TikTok">
+                    <img src="assets/icons/tiktok.svg" alt="TikTok">
+                </a>
+                <a href="https://youtube.com/@futurevoidbc" target="_blank" class="tooltip" data-tooltip="YouTube">
+                    <img src="assets/icons/youtube.svg" alt="YouTube">
+                </a>
+                <a href="https://open.spotify.com/artist/789KyYF2umf9qCuhF122Cb" target="_blank" class="tooltip"
+                    data-tooltip="Spotify">
+                    <img src="assets/icons/spotify.svg" alt="Spotify">
+                </a>
+                <a href="https://music.apple.com/ca/artist/futurevoid/1748332220" target="_blank" class="tooltip"
+                    data-tooltip="Apple Music">
+                    <img src="assets/icons/apple-music.svg" alt="Apple Music">
+                </a>
+                <a href="https://futurevoid.bandcamp.com/" target="_blank" class="tooltip" data-tooltip="Bandcamp">
+                    <img src="assets/icons/bandcamp.svg" alt="Bandcamp">
+                </a>
+                <a href="https://www.deezer.com/en/artist/267229702" target="_blank" class="tooltip"
+                    data-tooltip="Deezer">
+                    <img src="assets/icons/deezer.svg" alt="Deezer">
+                </a>
             </div>
         </div>
+
     </section>
 
     <div class="heart-easter-egg">
@@ -170,13 +182,14 @@
     </script>
 
 
-
-
     <footer>
         <p>For booking or press: <a href="mailto:futurevoidbc@gmail.com">futurevoidbc@gmail.com</a></p>
         <p>&copy; 2025 FUTUREVOID. All Rights Reserved.</p>
         <p>Kelowna, British Columbia, Canada</p>
     </footer>
+
+    <!-- Animation for Tooltips -->
+    <script src="/assets/js/tooltips.js"></script>
 
     <!-- Dangerously Easy -->
     <script src="https://unpkg.com/@studio-freight/lenis@latest"></script>
