@@ -49,3 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial check
     handleScroll();
 });
+
+
+// Ensure hero content loads on time
+
+window.addEventListener("load", () => {
+    document.querySelector(".hero-content").classList.add("loaded");
+});

@@ -148,8 +148,17 @@ body {
     text-align: center;
     padding-top: 5rem;
     position: relative;
+    /* Prevent  skipping of content on load */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+
+.hero-content.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Not sure if this rule is used for the logo or the main one. Remove the right one when I feel like it */
 .hero-logo {
