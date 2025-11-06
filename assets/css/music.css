@@ -1,140 +1,359 @@
-.featured-hero {
-    position: relative;
+/* MUSIC PAGE */
+
+/* --- FEATURED RELEASE EMPHASIS --- */
+#featured-release {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    height: auto;
-    /* height adjusts based on video */
     text-align: center;
+    background: radial-gradient(circle at center, rgba(126, 34, 206, 0.25), rgba(17, 17, 17, 0.8));
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 4rem;
+    /* creates clear separation from catalogue */
+    box-shadow: 0 0 40px rgba(126, 34, 206, 0.3), inset 0 0 30px rgba(225, 29, 72, 0.15);
+    position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
 }
 
-.video-bg {
-    position: relative;
-    width: 50vw;
-    /* 50% of screen width */
-    max-width: 600px;
-    aspect-ratio: 16 / 9;
-    /* maintain YouTube aspect ratio */
-    margin: 0 auto 1rem auto;
+/* Optional faint glow pulse animation behind the cover */
+#featured-release::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(225, 29, 72, 0.15), transparent 70%);
+    animation: pulseGlow 6s ease-in-out infinite;
     z-index: 0;
 }
 
-.video-bg iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.4) 40%,
-            rgba(0, 0, 0, 0.6) 100%);
-    z-index: 1;
-    pointer-events: none;
-    /* allow clicks to pass through */
-}
-
-.hero-content {
+.release-feature {
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
 }
 
-.hero-logo {
-    width: 60vw;
-    max-width: 400px;
-    height: auto;
+.release-feature h2 {
+    font-family: 'Unbounded', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #e11d48, #7e22ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1rem;
 }
 
-.featured-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.featured-buttons .btn {
-    min-width: 140px;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .video-bg {
-        width: 80vw;
-        /* larger on small screens for visibility */
-    }
-
-    .hero-logo {
-        width: 80vw;
-    }
-
-    .featured-buttons {
-        flex-direction: column;
-        width: 80%;
-    }
-
-    .featured-buttons .btn {
-        width: 100%;
-    }
-}
-
-.audio-trailer {
-    text-align: center;
-    margin: 3rem 0;
-    color: #fff;
-}
-
-.audio-trailer h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.audio-trailer audio {
-    width: 80%;
-    max-width: 500px;
-    outline: none;
-    border-radius: 10px;
-    background: #111;
-}
-
-.btn-presave {
-    display: inline-flex;
-    /* flexible box for centering */
-    justify-content: center;
-    /* horizontal centering */
-    align-items: center;
-    /* vertical centering */
-    padding: 1rem 2.5rem;
-    font-size: 1.2rem;
-    /* bigger text */
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(135deg, #ff0055, #aa00ff);
-    /* striking gradient */
+.release-feature .release-link {
+    margin-top: 1.25rem;
+    display: inline-block;
+    background: #fff;
+    color: #111;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(255, 0, 85, 0.5);
+    padding: 0.9rem 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
-.btn-presave:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.2);
-    box-shadow: 0 6px 20px rgba(255, 0, 85, 0.6);
+.release-feature .release-link:hover {
+    background: linear-gradient(135deg, #e11d48, #7e22ce);
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
 }
 
-.lyric-content {
-    color: #990099;
-    font-size: 0.8rem;
+/* --- SEPARATION + BALANCE --- */
+.release-catalogue {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+}
+
+/* Subtle dimming to visually push catalogue behind featured */
+.release-card {
+    position: relative;
+    z-index: 0;
+    /* base layer */
+}
+
+.release-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* make sure it stays behind text/links */
+}
+
+
+.release-card:hover {
+    background: rgba(126, 34, 206, 0.1);
+    transform: translateY(-3px);
+}
+
+.release-card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* General layout */
+#music-page {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* STANDARDIZE RELEASE ARTWORK SIZE */
+
+/* Featured release stays large */
+.release-feature img {
+    width: 100%;
+    max-width: 500px;
+    /* keeps featured big */
+    border-radius: 1rem;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.release-feature::after {
+    content: "NEW";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #e11d48, #7e22ce);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+/* --- Make actual link above pseudo-layer --- */
+.release-card .release-link {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Catalogue release cards (singles, EPs) */
+.release-card img {
+    width: 100%;
+    max-width: 300px;
+    /* caps EP/single artwork */
+    border-radius: 0.75rem;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.15);
+    margin-bottom: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.release-card.ep img {
+    max-width: 300px;
+    /* specifically limit EP artwork size */
+}
+
+/* --- EP + Singles consistent artwork sizing --- */
+.release-card.ep .release-cover,
+.release-card:not(.featured) .release-cover {
+    max-width: 220px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* --- Featured release larger but not huge --- */
+.release-card.featured .release-cover {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Center smaller artworks in catalogue cards */
+.release-card,
+.release-card.ep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.release-feature img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+}
+
+.release-feature h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.release-feature p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.release-feature .btn {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #e11d48, #7e22ce);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+}
+
+/* Catalogue section */
+.release-catalogue {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Center smaller artworks in catalogue cards */
+.release-card,
+.release-card.ep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Hover effect --- */
+.release-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.release-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.release-card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.release-card p {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0.75rem;
+}
+
+/* --- Track list formatting --- */
+.track-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.track-list a {
+    text-decoration: underline;
+    color: var(--accent-color, #9cf);
+}
+
+.track-list a:hover {
+    color: var(--accent-hover, #bdf);
+}
+
+
+/* --- Toggle tracks button --- */
+.toggle-tracks {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.toggle-tracks:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.track-list.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.track {
+    margin: 0.4rem 0;
+    color: #ccc;
+}
+
+.track a {
+    color: #e11d48;
+    text-decoration: none;
+}
+
+.track a:hover {
+    text-decoration: underline;
+}
+
+/* Subtle fade-in animation for collapsible content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive tuning */
+@media (max-width: 600px) {
+    #music-page {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .release-feature img {
+        max-width: 90%;
+    }
+
+    .release-card {
+        padding: 1.2rem;
+    }
+
+    .release-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .toggle-tracks {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
 }

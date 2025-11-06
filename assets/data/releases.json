@@ -1,0 +1,44 @@
+{
+    "cyanide": {
+        "title": "CYANIDE",
+        "cover": "/assets/images/bigjamocover.jpg",
+        "platforms": {
+            "spot": "https://open.spotify.com/track/107zzFtPAIiKtAuOVKukwB",
+            "apple": "https://music.apple.com/us/album/cyanide-single/1846975319",
+            "tidal": "https://tidal.com/album/467058270/u",
+            "qobuz": "https://www.qobuz.com/ca-en/album/cyanide-futurevoid/ir4hkcu8g1nbc",
+            "deezer": "https://link.deezer.com/s/31vZOGvSc2u6HKDKx840N",
+            "amz": "https://music.amazon.ca/tracks/B0FWC2XX7Y?marketplaceId=A2EUQ1WTGCTBG2",
+            "band": "https://futurevoid.bandcamp.com/track/cyanide",
+            "yt": "https://youtu.be/j0ip26pKQSw",
+            "ytm": "https://music.youtube.com/playlist?list=OLAK5uy_mZh_MCWmOJyAn5czM80LcxLZQJl_aHZqA"
+        }
+    },
+    "big-jamo": {
+        "title": "BIG JAMO",
+        "cover": "/assets/images/bigjamocover.jpg",
+        "platforms": {
+            "spot": "https://open.spotify.com/track/6DnyBOgMWUZYvtDzhHJpaB",
+            "apple": "https://music.apple.com/us/album/big-jamo-single/1839405750",
+            "tidal": "https://tidal.com/album/459874194/u",
+            "qobuz": "https://www.qobuz.com/ca-en/album/big-jamo-futurevoid/w63gv2ruqtq2a",
+            "deezer": "https://link.deezer.com/s/31vZPBSJddgmmnPyJzKXE",
+            "band": "https://futurevoid.bandcamp.com/track/big-jamo",
+            "yt": "https://youtu.be/5PTengr8zu8",
+            "ytm": "https://music.youtube.com/watch?v=x-VE5XzXcNA"
+        }
+    },
+    "in-vitro-ep": {
+        "title": "In Vitro (E.P.)",
+        "cover": "/assets/images/invitrocover.jpg",
+        "platforms": {
+            "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+            "tidal": "https://tidal.com/album/418966809/u",
+            "spot": "https://open.spotify.com/album/4pEfeyOBnLYWCcQCKMNbDt",
+            "apple": "https://music.apple.com/us/album/in-vitro-ep/1797944748",
+            "deezer": "https://link.deezer.com/s/31vZQ0N0CeXJQNm04pOWX",
+            "band": "https://futurevoid.bandcamp.com/album/in-vitro",
+            "yt": "https://www.youtube.com/playlist?list=PLx29Rs-3-5ZCTZjDwpJpvApkHCzWDGgwZ"
+        }
+    }
+}

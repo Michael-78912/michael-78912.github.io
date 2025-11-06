@@ -1,0 +1,115 @@
+{
+    "featuredReleaseKey": "cyanide",
+    "releases": {
+        "cyanide": {
+            "title": "CYANIDE",
+            "type": "single",
+            "cover": "/assets/images/bigjamocover.jpg",
+            "description": "A Haunting yet aggressive song about self-destructive cycles",
+            "platforms": {
+                "spot": "https://open.spotify.com/track/107zzFtPAIiKtAuOVKukwB",
+                "apple": "https://music.apple.com/us/album/cyanide-single/1846975319",
+                "tidal": "https://tidal.com/album/467058270/u",
+                "qobuz": "https://www.qobuz.com/ca-en/album/cyanide-futurevoid/ir4hkcu8g1nbc",
+                "deezer": "https://link.deezer.com/s/31vZOGvSc2u6HKDKx840N",
+                "amz": "https://music.amazon.ca/tracks/B0FWC2XX7Y?marketplaceId=A2EUQ1WTGCTBG2",
+                "band": "https://futurevoid.bandcamp.com/track/cyanide",
+                "yt": "https://youtu.be/j0ip26pKQSw",
+                "ytm": "https://music.youtube.com/playlist?list=OLAK5uy_mZh_MCWmOJyAn5czM80LcxLZQJl_aHZqA"
+            }
+        },
+        "big-jamo": {
+            "title": "BIG JAMO",
+            "type": "single",
+            "cover": "/assets/images/bigjamocover.jpg",
+            "description": "WHO IS BIG JAMO? WHAT IS  BIG JAMO?",
+            "platforms": {
+                "spot": "https://open.spotify.com/track/6DnyBOgMWUZYvtDzhHJpaB",
+                "apple": "https://music.apple.com/us/album/big-jamo-single/1839405750",
+                "tidal": "https://tidal.com/album/459874194/u",
+                "qobuz": "https://www.qobuz.com/ca-en/album/big-jamo-futurevoid/w63gv2ruqtq2a",
+                "deezer": "https://link.deezer.com/s/31vZPBSJddgmmnPyJzKXE",
+                "band": "https://futurevoid.bandcamp.com/track/big-jamo",
+                "yt": "https://youtu.be/5PTengr8zu8",
+                "ytm": "https://music.youtube.com/watch?v=x-VE5XzXcNA"
+            }
+        },
+        "in-vitro-ep": {
+            "title": "In Vitro (E.P.)",
+            "type": "ep",
+            "cover": "/assets/images/fviv.jpg",
+            "description": "Our Debut E.P.",
+            "platforms": {
+                "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+                "tidal": "https://tidal.com/album/418966809/u",
+                "spot": "https://open.spotify.com/album/4pEfeyOBnLYWCcQCKMNbDt",
+                "apple": "https://music.apple.com/us/album/in-vitro-ep/1797944748",
+                "deezer": "https://link.deezer.com/s/31vZQ0N0CeXJQNm04pOWX",
+                "band": "https://futurevoid.bandcamp.com/album/in-vitro",
+                "yt": "https://www.youtube.com/playlist?list=PLx29Rs-3-5ZCTZjDwpJpvApkHCzWDGgwZ"
+            },
+            "tracks": {
+                "in-vitro": {
+                    "title": "In Vitro",
+                    "platforms": {
+                        "spot": "https://open.spotify.com/track/6Fm8czHh8jDegOZ661jWRl?si=424f6adb9c204a8e",
+                        "apple": "https://music.apple.com/us/song/in-vitro/1797945020",
+                        "tidal": "https://tidal.com/track/418966810/u",
+                        "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+                        "deezer": "https://link.deezer.com/s/31x0ZwSPBHxAYkaDuMZgV",
+                        "band": "https://futurevoid.bandcamp.com/track/in-vitro",
+                        "yt": "https://youtu.be/4zaoJ-yUv8c?si=jDqbkj11Efv0-ofj"
+                    }
+                },
+                "hellhead": {
+                    "title": "HELLHEAD",
+                    "platforms": {
+                        "spot": "https://open.spotify.com/track/5pPVPd56rJ4SM3yBxQuVVW?si=8b9b10d95f414252",
+                        "apple": "https://music.apple.com/us/song/hellhead/1797945021",
+                        "tidal": "https://tidal.com/track/418966811/u",
+                        "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+                        "deezer": "https://link.deezer.com/s/31x12D95pXpiVpm9T6Nh5",
+                        "band": "https://futurevoid.bandcamp.com/track/hellhead-2",
+                        "yt": "https://youtu.be/PI6ZsJaMRDA?si=xHUkh9kfidyUmHG_"
+                    }
+                },
+                "destination-disaster": {
+                    "title": "Destination // Disaster",
+                    "platforms": {
+                        "spot": "https://open.spotify.com/track/7mMRroi9Sz6bhgg8DvtX6v?si=aff0539e4b24469d",
+                        "apple": "https://music.apple.com/us/song/destination-disaster/1797945022",
+                        "tidal": "https://tidal.com/track/418966812/u",
+                        "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+                        "deezer": "https://link.deezer.com/s/31x18GKcWfWwxr2l82nHP",
+                        "band": "https://futurevoid.bandcamp.com/track/destination-disaster",
+                        "yt": "https://example.com/youtube-destination-disaster"
+                    }
+                },
+                "serenity": {
+                    "title": "Serenity",
+                    "platforms": {
+                        "spot": "https://open.spotify.com/track/7hXZ1tjPkwilSA0zjIGoxF?si=2370be1d86014e85",
+                        "apple": "https://music.apple.com/us/song/serenity/1797945023",
+                        "tidal": "https://tidal.com/track/418966813/u",
+                        "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+                        "deezer": "https://link.deezer.com/s/31x1cqmGBT55kkR5pj0yU",
+                        "band": "https://futurevoid.bandcamp.com/track/serenity",
+                        "yt": "https://youtu.be/YJKQ6lQ2goQ?si=0oGqt90Zw1oYm_dS"
+                    }
+                },
+                "in-death": {
+                    "title": "In Death",
+                    "platforms": {
+                        "spot": "https://open.spotify.com/track/0Wl9tfyBO8DbgEd4ZrZ6Wb?si=1515a22a22de440a",
+                        "apple": "https://music.apple.com/us/song/in-death/1797945024",
+                        "tidal": "https://tidal.com/track/418966814/u",
+                        "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
+                        "deezer": "https://link.deezer.com/s/31x1fb5QRW3c7Y7gL43PX",
+                        "band": "https://futurevoid.bandcamp.com/track/in-death",
+                        "yt": "https://youtu.be/QWrC0aoG3Lk?si=9uj5w92fiLwm1PPP"
+                    }
+                }
+            }
+        }
+    }
+}

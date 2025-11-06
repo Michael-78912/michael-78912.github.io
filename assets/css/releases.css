@@ -1,0 +1,160 @@
+.release-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.release-container img#release-cover {
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.release-container h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow:
+        0 0 10px rgba(225, 29, 72, 0.6),
+        0 0 25px rgba(225, 29, 72, 0.25);
+    margin-bottom: 1.25rem;
+    background: linear-gradient(90deg, #fff, #e11d48 40%, #fff 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.platform-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.platform-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 9999px;
+    padding: 14px 28px;
+    width: 100%;
+    max-width: 320px;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle shine sweep */
+.platform-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.05));
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.platform-btn:hover::after {
+    left: 125%;
+}
+
+.platform-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+/* Specific platform colors & tweaks */
+.platform-btn.spot {
+    background: linear-gradient(180deg, #1DB954, #12833A);
+    border: 2px solid #1DB954;
+}
+
+.platform-btn.apple {
+    background: linear-gradient(180deg, #FA233B, #b11625);
+    border: 2px solid #FA233B;
+}
+
+.platform-btn.ytm {
+    background: linear-gradient(180deg, #FF0000, #A60000);
+    border: 2px solid #FF0000;
+}
+
+.platform-btn.yt {
+    background: linear-gradient(180deg, #FF0000, #A60000);
+    border: 2px solid #FF0000;
+}
+
+.platform-btn.qobuz {
+    background: linear-gradient(180deg, #0066CC, #003366);
+    border: 2px solid #0066CC;
+}
+
+.platform-btn.deezer {
+    background: linear-gradient(180deg, #EF5466, #8A1F2A);
+    border: 2px solid #EF5466;
+}
+
+.platform-btn.amz {
+    background: linear-gradient(180deg, #00A8E1, #004D70);
+    border: 2px solid #00A8E1;
+}
+
+.platform-btn.band {
+    background: linear-gradient(180deg, #6294C1, #325D83);
+    border: 2px solid #6294C1;
+}
+
+.platform-btn.tidal {
+    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    border: 2px solid #ffffffdd;
+    color: #fff;
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.15),
+        inset 0 0 6px rgba(255, 255, 255, 0.08);
+}
+
+.platform-btn.tidal:hover {
+    box-shadow:
+        0 0 14px rgba(255, 255, 255, 0.3),
+        inset 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.platform-btn.tidal img {
+    filter: drop-shadow(0 0 3px #ffffffaa);
+}
+
+/* Icon alignment fix */
+.platform-btn img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    transform: translateY(1px);
+}
+
+.platform-button.tidal {
+    border: 2px solid white;
+    background: linear-gradient(145deg, #000000 0%, #1a1a1a 100%);
+}
+
+.platform-button.tidal:hover {
+    background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
+}
