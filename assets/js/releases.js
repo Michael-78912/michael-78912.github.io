@@ -44,6 +44,41 @@ fetch('/assets/data/releases-trial.json')
         titleEl.textContent = displayData.title || release.title || 'Untitled';
         document.title = `FUTUREVOID — ${displayData.title || release.title}`;
 
+        // --- Update Metadata ---
+        const metaDesc = document.querySelector('meta[name="description"]');
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogImg = document.querySelector('meta[property="og:image"]');
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+        const twImg = document.querySelector('meta[name="twitter:image"]');
+
+        const fullTitle = `FUTUREVOID — ${displayData.title || release.title}`;
+        const description = displayData.description || release.description || 'Listen to the latest from FUTUREVOID.';
+        const imageUrl = `https://futurevoid.ca${displayData.cover || release.cover || '/assets/images/fallback.jpg'}`;
+        const canonicalUrl = `https://futurevoid.ca/releases/?release=${releaseKey}${trackKey ? `&track=${trackKey}` : ''}`;
+
+        document.title = fullTitle;
+        metaDesc?.setAttribute('content', description);
+        ogTitle?.setAttribute('content', fullTitle);
+        ogDesc?.setAttribute('content', description);
+        ogImg?.setAttribute('content', imageUrl);
+        ogUrl?.setAttribute('content', canonicalUrl);
+        twTitle?.setAttribute('content', fullTitle);
+        twDesc?.setAttribute('content', description);
+        twImg?.setAttribute('content', imageUrl);
+
+        // canonical link tag update
+        let canonicalTag = document.querySelector('link[rel="canonical"]');
+        if (!canonicalTag) {
+            canonicalTag = document.createElement('link');
+            canonicalTag.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonicalTag);
+        }
+        canonicalTag.setAttribute('href', canonicalUrl);
+
+
         const preferredOrder = [
             'spot', 'apple', 'ytm', 'amz', 'deezer', 'band', 'tidal', 'qobuz', 'yt'
         ];
