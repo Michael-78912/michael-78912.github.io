@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTUREVOID — EPK</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/epk.css">
+    <link rel="stylesheet" href="/assets/css/gallery.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+    <meta name="description"
+        content="FUTUREVOID Electronic Press Kit: bio, music, photos, stage info, and contact for promoters and press.">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/music/">Music</a></li>
+                <li><a href="/dates/">Shows</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="epk-main">
+        <section class="about-hero">
+            <div class="parallax-bg" style="background-image: url('/assets/images/live-hero.jpg')"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="/assets/images/logo (red).webp" alt="Future Void Logo" class="hero-logo">
+                <h1>You've seen a lot. None are like this.</h1>
+                <p>The FUTURE of Canadian Heavy Music is VOID</p>
+                <div class="hero-buttons">
+                    <a href="/music/" class="btn btn-primary">Listen Now</a>
+                    <a href="#" id="open-gallery" class="btn btn-secondary">View Gallery</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="epk-section bio" id="bio">
+            <h2>About FUTUREVOID</h2>
+            <p class="bio-short">
+                FUTUREVOID is a four-piece heavy/metalcore band from Kelowna, BC. Known for brutal live energy
+                and raw, emotionally charged music, the band is quickly building a reputation across the BC Metal
+                scene. They have a solid catalogue and a strong live set, showcasing talents and...
+                <a href="#" id="expand-bio" class="read-more">Read more</a>
+            </p>
+
+            <div class="bio-long hidden">
+                <p><strong>Want the full story?</strong> Formed in late 2023, FUTUREVOID blends metalcore,
+                    post-hardcore, and modern heavy music into a distinct, high-impact sound. Entirely DIY, the band
+                    writes,
+                    records, produces, and mixes all their own music. They released their debut single <i>HELLHEAD</i>
+                    in May
+                    2024, played their first live show in August 2024, and followed with several singles leading to
+                    their debut EP
+                    in February 2025. Since then, FUTUREVOID has kept up a steady stream of releases — maintaining both
+                    quality and
+                    momentum well into 2026.</p>
+
+                <h4>Members</h4>
+                <ul>
+                    <li><strong>Logan</strong> – Vocals: Combines melodic hooks with brutal, fast, and heavy delivery.
+                        Balances intense breakdowns with anthemic choruses to drive the energy of every show.</li>
+                    <li><strong>Charlie</strong> – Drums: Brings power, groove, and precision. A versatile player who
+                        knows when to push the band and when to anchor the performance.</li>
+                    <li><strong>Sam</strong> – Lead Guitar: Offers a unique perspective drawn from alternative music
+                        outside the metal scene. Provides distinct songwriting and arrangements that set FUTUREVOID
+                        apart.</li>
+                    <li><strong>Michael</strong> – Rhythm Guitar & Production: Anchors the band with solid riffs while
+                        mixing and mastering the tracks, giving FUTUREVOID its polished yet heavy sound.</li>
+                </ul>
+
+                <p><strong>Business Strategy:</strong> FUTUREVOID approaches each release and show with a professional
+                    and strategic mindset. The band prioritizes partnerships with key promoters, festivals, and press
+                    outlets, leveraging social campaigns, targeted fan engagement, and press relationships. Each release
+                    is timed for maximum impact, and live shows are carefully chosen to deliver value for both fans and
+                    promoters. <a href="/contact">Contact us</a> for inquiries — we respond fast and work
+                    collaboratively to make every show a success.</p>
+            </div>
+        </section>
+
+
+        <section class="epk-section photos" id="photos">
+            <h2 class="gallery-trigger">Promo / Live Photos</h2>
+        </section>
+
+        <section class="epk-section tech collapsible" id="tech">
+            <h2 class="collapsible-header">Technical / Stage Info</h2>
+            <div class="collapsible-content">
+                <ul>
+                    <li>Band: 4 members (Rhythm/Lead guitar, drums, vocals)</li>
+                    <li>Full Drumkit, 320W Powered Analog 12-channel mixer with 2 heads and 2 wedges</li>
+                    <li>Monitoring: In-ears provided</li>
+                    <li>We run DI from pedalboards, vocal mics, and drum mics into a splitter: split 1 → FOH mix, split
+                        2 → digital mixer for in-ears</li>
+                    <li>Backing tracks run direct from digital mixer to FOH Mix</li>
+                    <li><a href="mailto:futurevoidbc@gmail.com">Contact</a> for more info! We got all sorts of wacky
+                        cables and nice equipment.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="epk-section contact collapsible" id="contact">
+            <h2 class="collapsible-header">Booking & Press Contact</h2>
+            <div class="collapsible-content">
+                <p>Email: <a href="mailto:futurevoidbc@gmail.com">booking@futurevoid.ca</a></p>
+                <p>Or, DM on Instagram <a href="https://www.instagram.com/futurevoid.bc/">@futurevoid.bc</a></p>
+                <a href="/assets/FutureVoid_EPK.pdf" class="btn btn-primary" download>Download PDF EPK</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div id="gallery-placeholder"></div>
+    <script>
+        document.getElementById("open-gallery").addEventListener("click", async (e) => {
+            e.preventDefault();
+            const placeholder = document.getElementById("gallery-placeholder");
+
+            if (!placeholder.hasChildNodes()) {
+                try {
+                    const html = await fetch("/assets/embeds/gallery.html").then(res => res.text());
+                    placeholder.innerHTML = html;
+
+                    const script = document.createElement("script");
+                    script.src = "/assets/js/gallery.js";
+                    document.body.appendChild(script);
+
+                    script.onload = () => {
+                        const galleryContainer = document.getElementById("gallery-container");
+                        if (galleryContainer) {
+                            galleryContainer.classList.add("active");
+                        }
+                    };
+                } catch (err) {
+                    console.error("Error loading gallery:", err);
+                }
+            } else {
+                const galleryContainer = document.getElementById("gallery-container");
+                if (galleryContainer) {
+                    galleryContainer.classList.add("active");
+                }
+            }
+        });
+
+    </script>
+
+    <footer>
+        <p>For booking or press, <a href="/contact/">contact us</a> or view our <a href="/epk/">EPK</a>.</p>
+        <p>&copy; 2025 FUTUREVOID. All Rights Reserved.</p>
+        <p>Kelowna, British Columbia, Canada</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/@studio-freight/lenis@latest"></script>
+    <script src="/assets/js/epk.js"></script>
+    <script src="/assets/js/parallax.js"></script>
+</body>
+
+</html>

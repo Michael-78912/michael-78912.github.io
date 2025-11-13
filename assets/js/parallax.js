@@ -15,24 +15,27 @@ document.addEventListener("DOMContentLoaded", function () {
     // Prevent parallax jump
     heroBg.style.transform = `translateY(0px)`;
 
+
     function handleScroll() {
         const scroll = window.scrollY;
-        const heroHeight = document.querySelector('.hero').offsetHeight;
-        const windowHeight = window.innerHeight;
 
         // Parallax
         heroBg.style.transform = `translateY(${scroll * 0.4}px)`;
 
-        // Connect overlay reveal when top of hero reaches mid-screen
-        const overlayTop = overlay.getBoundingClientRect().top;
-        if (overlayTop < windowHeight * 0.75) {
-            overlay.style.opacity = 1;
-            overlay.style.transform = 'translate(-50%, 0)';
-        } else {
-            overlay.style.opacity = 0;
-            overlay.style.transform = 'translate(-50%, 100px)';
+        // Only do overlay stuff if overlay exists
+        if (overlay) {
+            const overlayTop = overlay.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (overlayTop < windowHeight * 0.75) {
+                overlay.style.opacity = 1;
+                overlay.style.transform = 'translate(-50%, 0)';
+            } else {
+                overlay.style.opacity = 0;
+                overlay.style.transform = 'translate(-50%, 100px)';
+            }
         }
     }
+
 
 
     lenis.on('scroll', handleScroll);

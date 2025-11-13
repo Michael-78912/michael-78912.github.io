@@ -1,0 +1,481 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+.about-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.about-hero .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    padding: 1rem;
+}
+
+
+.hero-logo {
+    width: clamp(180px, 25vw, 340px);
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+
+.epk-main {
+    padding: 2rem;
+}
+
+
+.epk-nav {
+    position: sticky;
+    top: 100px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    z-index: 999;
+}
+
+.epk-nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.epk-nav a:hover {
+    background: #e11d48;
+    color: #fff;
+}
+
+
+.about-hero .parallax-bg {
+    top: -2vh;
+
+    height: 104%;
+}
+
+
+.about-hero .hero-logo {
+    width: clamp(240px, 32vw, 420px);
+    margin-bottom: 1.5rem;
+}
+
+
+.about-hero h1 {
+    text-shadow:
+        -2px -2px 3px rgba(0, 0, 0, 0.8),
+        2px -2px 3px rgba(0, 0, 0, 0.8),
+        -2px 2px 3px rgba(0, 0, 0, 0.8),
+        2px 2px 3px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(225, 29, 72, 0.6),
+        0 0 20px rgba(225, 29, 72, 0.3);
+}
+
+
+.about-hero p {
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.9),
+        0 0 6px rgba(126, 34, 206, 0.6);
+}
+
+
+.about-hero .hero-buttons {
+    margin-bottom: 3rem;
+}
+
+
+.about-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.4) 40%,
+            rgba(0, 0, 0, 0.8) 100%);
+    mix-blend-mode: multiply;
+    transition: opacity 0.4s ease;
+}
+
+
+@media (hover: hover) {
+    .about-hero:hover .hero-overlay {
+        opacity: 0.85;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .about-hero .hero-overlay {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.7) 0%,
+                rgba(0, 0, 0, 0.5) 40%,
+                rgba(0, 0, 0, 0.9) 100%);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .about-hero p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+
+    .about-hero .hero-logo {
+        width: 65%;
+    }
+}
+
+
+.about-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem 1rem;
+}
+
+
+.hero-content img.hero-logo {
+    width: 80%;
+    max-width: 420px;
+    min-width: 240px;
+    margin-bottom: 1.25rem;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #e11d48;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.hero-buttons .btn {
+    min-width: 150px;
+    text-align: center;
+}
+
+
+.btn {
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(135deg, #e11d48, #7e22ce);
+    color: #fff;
+    transition: all 0.3s ease;
+    padding: 0.8rem 2rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+.btn-secondary {
+    background: none;
+    border: 2px solid #7e22ce;
+    color: #fff;
+}
+
+
+.epk-section {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.epk-section h2 {
+    color: #e11d48;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.collapsible-header {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.collapsible-header::after {
+    content: "▸";
+    font-size: 1.4rem;
+    color: #e11d48;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.collapsible-header.active::after {
+    transform: rotate(90deg);
+}
+
+.collapsible-header:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(225, 29, 72, 0.6);
+}
+
+.collapsible-header:hover::after {
+    color: #fff;
+}
+
+.collapsible-content {
+    display: none;
+    margin-top: 1rem;
+}
+
+.collapsible-content.active {
+    display: block;
+}
+
+
+.bio-short,
+.bio-long {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.bio-long {
+    display: none;
+    margin-top: 1em;
+}
+
+.bio-long.active {
+    display: block;
+}
+
+
+.track {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    border: 1px solid #444;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(30, 30, 30, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.5);
+}
+
+.track img {
+    max-width: 200px;
+    border: 2px solid #e11d48;
+    border-radius: 4px;
+}
+
+.track-info {
+    flex: 1;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.5);
+}
+
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.photo-grid img {
+    width: 100%;
+    border: 2px solid #e11d48;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid #e11d48;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .epk-main {
+        padding: 1rem;
+    }
+
+    .about-hero {
+        min-height: 70vh;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content img.hero-logo {
+        width: 85%;
+        max-width: 340px;
+        min-width: 200px;
+        margin-bottom: 1rem;
+    }
+
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        margin: 0.75rem 0;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn {
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin: 0.5rem auto;
+    }
+
+    .collapsible-header {
+        font-size: 1.2rem;
+    }
+
+    .collapsible-header::after {
+        font-size: 1.25rem;
+    }
+
+    .epk-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .track {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .track img {
+        max-width: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #lightbox img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}

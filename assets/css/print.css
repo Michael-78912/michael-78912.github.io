@@ -1,0 +1,26 @@
+/* Hide navigation + buttons */
+nav,
+.site-header,
+footer {
+    display: none !important;
+}
+
+/* Simplify layout */
+body {
+    background: #fff;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Make hero image static and full-width */
+.about-hero {
+    background: url("/assets/images/your-hero-image.jpg") center/cover no-repeat;
+    height: 400px;
+}
+
+/* Fix widths for print */
+.main-content {
+    width: 8.5in;
+    margin: 0 auto;
+    padding: 1in;
+}
