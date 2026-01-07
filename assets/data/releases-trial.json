@@ -1,6 +1,26 @@
 {
-    "featuredReleaseKey": "cyanide",
+    "featuredReleaseKey": "feel-something",
     "releases": {
+        "feel-something": {
+            "title": "FEEL SOMETHING",
+            "type": "single",
+            "cover": "/assets/images/TLIH.jpg",
+            "description": "Fast, Upbeat track with a huge chorus, about the struggles of addiction",
+            "platforms": {
+                "spot": "https://open.spotify.com/track/5X2ieXAgCvXwLvv8nwhXhh?si=c9031ccb6aa14ee0",
+                "yt": "https://youtu.be/1Ke2hIA3lYg"
+            }
+        },
+        "satiated": {
+            "title": "SATIATED",
+            "type": "single",
+            "cover": "/assets/images/TLIH.jpg",
+            "description": "A dark and dynamic track, embodying an anxiety attack",
+            "platforms": {
+                "spot": "https://open.spotify.com/track/7HxCghfj2Fdew92DQ7iF7W?si=9857c7afd7f6467f",
+                "yt": "https://youtu.be/f_p3u98sekE"
+            }
+        },
         "cyanide": {
             "title": "CYANIDE",
             "type": "single",
