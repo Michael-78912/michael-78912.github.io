@@ -8,7 +8,14 @@
             "description": "Fast, Upbeat track with a huge chorus, about the struggles of addiction",
             "platforms": {
                 "spot": "https://open.spotify.com/track/5X2ieXAgCvXwLvv8nwhXhh?si=c9031ccb6aa14ee0",
-                "yt": "https://youtu.be/1Ke2hIA3lYg"
+                "apple": "https://music.apple.com/us/song/feel-something-live/1862218279",
+                "qobuz": "https://www.qobuz.com/ca-en/album/to-live-in-hearts-futurevoid/i0b1vnecw3qxu",
+                "amz": "https://music.amazon.ca/albums/B0G8458PHP?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=CA&ref=dm_sh_PToiomIFk0Jpis1fD0WnMm743&trackAsin=B0G851LKWV",
+                "deezer": "https://link.deezer.com/s/326lrT5WWgPCU67PgxRgQ",
+                "yt": "https://youtu.be/1Ke2hIA3lYg",
+                "ytm": "https://music.youtube.com/watch?v=cRcGP7t4tUk&si=Tr-kASCNP4wpfmMt",
+                "tidal": "https://tidal.com/track/482708142/u",
+                "band": "https://futurevoid.bandcamp.com/track/feel-something"
             }
         },
         "satiated": {
@@ -18,7 +25,14 @@
             "description": "A dark and dynamic track, embodying an anxiety attack",
             "platforms": {
                 "spot": "https://open.spotify.com/track/7HxCghfj2Fdew92DQ7iF7W?si=9857c7afd7f6467f",
-                "yt": "https://youtu.be/f_p3u98sekE"
+                "apple": "https://music.apple.com/us/song/satiated-live/1862218278",
+                "qobuz": "https://www.qobuz.com/ca-en/album/to-live-in-hearts-futurevoid/i0b1vnecw3qxu",
+                "amz": "https://music.amazon.ca/albums/B0G8458PHP?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=CA&ref=dm_sh_ALiAXB8tKxN9PPPfZ9s1CNqUI&trackAsin=B0G83M7BJZ",
+                "deezer": "https://link.deezer.com/s/326lrugfoVxuaLbKVTW3c",
+                "yt": "https://youtu.be/f_p3u98sekE",
+                "ytm": "https://music.youtube.com/watch?v=cRcGP7t4tUk&si=TLkA47-aQWAq8C00",
+                "tidal": "https://tidal.com/track/482708140/u",
+                "band": "https://futurevoid.bandcamp.com/track/satiated"
             }
         },
         "cyanide": {
