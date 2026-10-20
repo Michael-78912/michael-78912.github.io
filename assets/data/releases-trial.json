@@ -1,11 +1,20 @@
 {
-    "featuredReleaseKey": "feel-something",
+    "featuredReleaseKey": "hope-in-heaven",
     "releases": {
+        "hope-in-heaven": {
+            "title": "HOPE IN HEAVEN",
+            "type": "single",
+            "cover": "/assets/images/hih.jpg",
+            "platforms": {
+                "spot": "https://open.spotify.com/track/7DltD4djCnVgNu8it3Lgap?si=5fd0be8446804287",
+                "apple": "https://music.apple.com/us/song/hope-in-heaven/6814436034",
+                "ytm": "https://music.youtube.com/watch?v=DfpjSqmmV-8&si=qF9uqnWKOxG1ZwUB"
+            }
+        },
         "feel-something": {
             "title": "FEEL SOMETHING",
             "type": "single",
             "cover": "/assets/images/TLIH.jpg",
-            "description": "Fast, Upbeat track with a huge chorus, about the struggles of addiction",
             "platforms": {
                 "spot": "https://open.spotify.com/track/5X2ieXAgCvXwLvv8nwhXhh?si=c9031ccb6aa14ee0",
                 "apple": "https://music.apple.com/us/song/feel-something-live/1862218279",
@@ -22,7 +31,6 @@
             "title": "SATIATED",
             "type": "single",
             "cover": "/assets/images/TLIH.jpg",
-            "description": "A dark and dynamic track, embodying an anxiety attack",
             "platforms": {
                 "spot": "https://open.spotify.com/track/7HxCghfj2Fdew92DQ7iF7W?si=9857c7afd7f6467f",
                 "apple": "https://music.apple.com/us/song/satiated-live/1862218278",
@@ -39,7 +47,6 @@
             "title": "CYANIDE",
             "type": "single",
             "cover": "/assets/images/bigjamocover.jpg",
-            "description": "A Haunting yet aggressive song about self-destructive cycles",
             "platforms": {
                 "spot": "https://open.spotify.com/track/107zzFtPAIiKtAuOVKukwB",
                 "apple": "https://music.apple.com/us/album/cyanide-single/1846975319",
@@ -56,7 +63,6 @@
             "title": "BIG JAMO",
             "type": "single",
             "cover": "/assets/images/bigjamocover.jpg",
-            "description": "WHO IS BIG JAMO? WHAT IS  BIG JAMO?",
             "platforms": {
                 "spot": "https://open.spotify.com/track/6DnyBOgMWUZYvtDzhHJpaB",
                 "apple": "https://music.apple.com/us/album/big-jamo-single/1839405750",
@@ -72,7 +78,6 @@
             "title": "In Vitro (E.P.)",
             "type": "ep",
             "cover": "/assets/images/fviv.jpg",
-            "description": "Our Debut E.P.",
             "platforms": {
                 "qobuz": "https://www.qobuz.com/ca-en/album/in-vitro-futurevoid/bs7jkjxmm66za",
                 "tidal": "https://tidal.com/album/418966809/u",
